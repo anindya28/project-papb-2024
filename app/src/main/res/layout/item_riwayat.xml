@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/pink"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvSaturasiOksigen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="Saturasi Oksigen"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ketTanggal" />
+
+    <TextView
+        android:id="@+id/tvSpO2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="0"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaturasiOksigen" />
+
+    <TextView
+        android:id="@+id/tvTekanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="Tekanan Darah"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSpO2" />
+
+    <TextView
+        android:id="@+id/tvmm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="0"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTekanan" />
+
+    <TextView
+        android:id="@+id/tvhg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="0"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/KetMM"
+        app:layout_constraintTop_toBottomOf="@+id/tvTekanan" />
+
+    <TextView
+        android:id="@+id/tvdetakJantung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="Detak Jantung"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tvSaturasiOksigen"
+        app:layout_constraintTop_toBottomOf="@+id/ketTanggal" />
+
+    <TextView
+        android:id="@+id/tvbpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="0"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvdetakJantung" />
+
+    <TextView
+        android:id="@+id/tvsuhu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="Suhu Tubuh"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tvTekanan"
+        app:layout_constraintTop_toBottomOf="@+id/tvbpm" />
+
+    <TextView
+        android:id="@+id/tvcelcius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="0"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvsuhu" />
+
+    <TextView
+        android:id="@+id/ketBpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="bpm"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tvbpm"
+        app:layout_constraintTop_toBottomOf="@+id/tvdetakJantung" />
+
+    <TextView
+        android:id="@+id/ketCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="Celcius"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tvcelcius"
+        app:layout_constraintTop_toBottomOf="@+id/tvsuhu" />
+
+    <TextView
+        android:id="@+id/KetMM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="mmHg / "
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tvmm"
+        app:layout_constraintTop_toBottomOf="@+id/tvTekanan" />
+
+    <TextView
+        android:id="@+id/ketHg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="mmHg"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tvhg"
+        app:layout_constraintTop_toBottomOf="@+id/tvTekanan" />
+
+    <TextView
+        android:id="@+id/ketSp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="SpO2"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tvSpO2"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaturasiOksigen" />
+
+    <TextView
+        android:id="@+id/ketTanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans"
+        android:text="Tanggal : "
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans"
+        android:text="09-10-2024"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/ketTanggal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ketDiagnosa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="Diagnosa :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvmm" />
+
+    <TextView
+        android:id="@+id/tvDiagnosa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="11dp"
+        android:text="Nomal"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/ketDiagnosa"
+        app:layout_constraintTop_toBottomOf="@+id/ketHg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
