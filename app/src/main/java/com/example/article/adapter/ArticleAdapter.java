@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso;
 
 public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHolder> {
     private List<Article> articles;
-    private List<Article> filteredArticles; // Untuk menyimpan hasil pencarian
+    private List<Article> filteredArticles;
     private Context context;
     private final OnItemClickListener listener;
 
