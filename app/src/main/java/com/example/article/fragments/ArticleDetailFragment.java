@@ -1,4 +1,4 @@
-package com.example.article2.fragments;
+package com.example.article.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import com.example.article2.R;
+import com.example.article.R;
 import com.squareup.picasso.Picasso;
 
 public class ArticleDetailFragment extends Fragment {

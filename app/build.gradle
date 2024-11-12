@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.article2"
+    namespace = "com.example.article"
     compileSdkVersion 34
 
     defaultConfig {

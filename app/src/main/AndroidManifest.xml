@@ -10,14 +10,13 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="Article2"
+        android:label="Article"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Article"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
-        <!-- MainActivity akan bertindak sebagai host untuk fragment-fragment -->
         <activity
             android:name=".MainActivity"
             android:exported="true">

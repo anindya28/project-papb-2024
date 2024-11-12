@@ -6,27 +6,48 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.article.model.Article;
-import java.util.List;
 import java.util.ArrayList;
-import android.content.Intent;
+import java.util.List;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import com.example.article.ArticleDetailActivity;
 import com.example.article.R;
 import com.squareup.picasso.Picasso;
 
 public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHolder> {
     private List<Article> articles;
+    private List<Article> filteredArticles; // Untuk menyimpan hasil pencarian
     private Context context;
+    private final OnItemClickListener listener;
 
-    public ArticleAdapter(Context context) {
+    public interface OnItemClickListener {
+        void onItemClick(Article article);
+    }
+
+    public ArticleAdapter(Context context, OnItemClickListener listener) {
         this.context = context;
+        this.listener = listener;
         this.articles = new ArrayList<>();
+        this.filteredArticles = new ArrayList<>();
     }
 
     public void setArticles(List<Article> articles) {
         this.articles = articles;
+        this.filteredArticles = new ArrayList<>(articles); // Set untuk pencarian
+        notifyDataSetChanged();
+    }
+
+    public void filter(String query) {
+        filteredArticles.clear();
+        if (query.isEmpty()) {
+            filteredArticles.addAll(articles);
+        } else {
+            for (Article article : articles) {
+                if (article.getTitle().toLowerCase().contains(query.toLowerCase())) {
+                    filteredArticles.add(article);
+                }
+            }
+        }
         notifyDataSetChanged();
     }
 
@@ -40,43 +61,37 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Article article = articles.get(position);
-        holder.titleTextView.setText(article.getTitle());
-        holder.contentPreview.setText(article.getContent().substring(0,
-                Math.min(article.getContent().length(), 100)) + "...");
-
-        if (article.getImgUrl() != null && !article.getImgUrl().isEmpty()) {
-            Picasso.get().load(article.getImgUrl())
-                    .placeholder(R.drawable.rruu)
-                    .error(R.drawable.rruu)
-                    .into(holder.articleImage);
-        }
-
-        holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, ArticleDetailActivity.class);
-            intent.putExtra("article_id", article.getId());
-            intent.putExtra("article_title", article.getTitle());
-            intent.putExtra("article_content", article.getContent());
-            intent.putExtra("article_image", article.getImgUrl());
-            context.startActivity(intent);
-        });
+        Article article = filteredArticles.get(position);
+        holder.bind(article, listener);
     }
 
     @Override
     public int getItemCount() {
-        return articles.size();
+        return filteredArticles.size();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView articleImage;
-        TextView titleTextView;
-        TextView contentPreview;
+        TextView titleTextView, contentPreview;
 
         ViewHolder(View view) {
             super(view);
             articleImage = view.findViewById(R.id.articleImage);
             titleTextView = view.findViewById(R.id.titleTextView);
             contentPreview = view.findViewById(R.id.contentPreview);
+        }
+
+        void bind(Article article, OnItemClickListener listener) {
+            titleTextView.setText(article.getTitle());
+            contentPreview.setText(article.getContent().substring(0,
+                    Math.min(article.getContent().length(), 100)) + "...");
+
+            Picasso.get().load(article.getImgUrl())
+                    .placeholder(R.drawable.rruu)
+                    .error(R.drawable.rruu)
+                    .into(articleImage);
+
+            itemView.setOnClickListener(v -> listener.onItemClick(article));
         }
     }
 }

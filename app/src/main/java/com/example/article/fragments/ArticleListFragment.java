@@ -1,4 +1,4 @@
-package com.example.article2.fragments;
+package com.example.article.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,12 +13,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import com.example.article2.R;
-import com.example.article2.adapter.ArticleAdapter;
-import com.example.article2.api.ApiService;
-import com.example.article2.api.RetrofitClient;
-import com.example.article2.model.ApiResponse;
-import com.example.article2.model.Article;
+import com.example.article.R;
+import com.example.article.adapter.ArticleAdapter;
+import com.example.article.api.ApiService;
+import com.example.article.api.RetrofitClient;
+import com.example.article.model.ApiResponse;
+import com.example.article.model.Article;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
