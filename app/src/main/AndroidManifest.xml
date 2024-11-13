@@ -18,7 +18,7 @@
             android:name=".DetailArtikel"
             android:exported="false" />
         <activity
-            android:name=".TambahRekam"
+            android:name=".TambahRekamFragment"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

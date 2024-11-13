@@ -1,10 +1,14 @@
 package com.example.postnatalcare;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,7 +20,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class TambahRekam extends AppCompatActivity {
+public class TambahRekamFragment extends Fragment {
 
     private List<Riwayat> Koleksi;
     private KoleksiAdapter koleksiAdapter;
@@ -28,23 +32,22 @@ public class TambahRekam extends AppCompatActivity {
     private TextInputLayout celcius;
     private Button btSimpan;
 
-
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tambah_rekam);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.tambah_rekam_fragment,container,false);
 
-        this.SpO2 = findViewById(R.id.tiSpO2);
-        this.mm = findViewById(R.id.tiMm);
-        this.hg = findViewById(R.id.tiHg);
-        this.bpm = findViewById(R.id.tiDetakJantung);
-        this.celcius = findViewById(R.id.tiSuhu);
-        this.btSimpan = findViewById(R.id.btTambah);
-        
+        this.SpO2 = v.findViewById(R.id.tiSpO2);
+        this.mm = v.findViewById(R.id.tiMm);
+        this.hg = v.findViewById(R.id.tiHg);
+        this.bpm = v.findViewById(R.id.tiDetakJantung);
+        this.celcius = v.findViewById(R.id.tiSuhu);
+        this.btSimpan = v.findViewById(R.id.btTambah);
+
         this.Koleksi = new ArrayList<Riwayat>();
-        this.koleksiAdapter = new KoleksiAdapter(this, this.Koleksi);
-        this.rvKoleksi = this.findViewById(R.id.rvRiwayat);
-        this.rvKoleksi.setLayoutManager(new LinearLayoutManager(this));
+        this.koleksiAdapter = new KoleksiAdapter(getContext(), this.Koleksi);
+        this.rvKoleksi = v.findViewById(R.id.rvRiwayat);
+        this.rvKoleksi.setLayoutManager(new LinearLayoutManager(getContext()));
         this.rvKoleksi.setAdapter(this.koleksiAdapter);
 
         this.btSimpan.setOnClickListener(new View.OnClickListener() {
@@ -68,12 +71,9 @@ public class TambahRekam extends AppCompatActivity {
                 hg.getEditText().setText("");
                 bpm.getEditText().setText("");
                 celcius.getEditText().setText("");
+//
             }
         });
-
-
-
-
-
+        return v;
     }
 }
