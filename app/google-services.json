@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "46403495281",
+    "project_id": "post-natal-care-12c33",
+    "storage_bucket": "post-natal-care-12c33.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46403495281:android:db81f89a4dc70a497f02d0",
+        "android_client_info": {
+          "package_name": "com.example.postnatalcare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu8g2uO8PWfBOVx7P0QmUczz37D9lMrWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
