@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+
+        <ImageView
+            android:id="@+id/ivBackTips"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arrow" />
+
+        <ImageView
+            android:id="@+id/ivGambarDetailTips"
+            android:layout_width="match_parent"
+            android:layout_height="193dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBackTips"
+            app:srcCompat="@drawable/hah" />
+
+        <TextView
+            android:id="@+id/tvJudulDetailTips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Judul Disini"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivGambarDetailTips" />
+
+        <TextView
+            android:id="@+id/tvDeskripsiDetailTips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Deskripsi Disini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvJudulDetailTips" />
+
+        <TextView
+            android:id="@+id/IsiDetailTips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Isi Disini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDeskripsiDetailTips" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

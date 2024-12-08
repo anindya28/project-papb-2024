@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_new"
+        android:label="Post Natal Care"
+        android:roundIcon="@mipmap/ic_new_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PAPostNatal"
+        tools:targetApi="31">
+        <activity
+            android:name=".DetailTips"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UpdateRekamMedis"
+            android:exported="false" />
+        <activity
+            android:name=".SavedArticle"
+            android:exported="false" />
+        <activity
+            android:name=".SemuaRiwayat"
+            android:exported="false" />
+        <activity
+            android:name=".DetailArtikel"
+            android:exported="false" />
+        <activity
+            android:name=".tambah_rekam"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

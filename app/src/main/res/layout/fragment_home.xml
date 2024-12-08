@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Hai, Jessica Amelia"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/DetailMasaNifas"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/magenta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGreeting">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="150dp"
+                android:layout_height="129dp"
+                android:src="@drawable/mask"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#8EC4B4"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Detail"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="83dp"
+                android:layout_height="81dp"
+                android:src="@drawable/intersect"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNamaUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Jessica Amelia"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Masuk Minggu Pertama"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNamaUser" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:progress="15"
+                android:progressBackgroundTint="#FFFFFF"
+                android:progressTint="#8EC4B4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
+
+            <TextView
+                android:id="@+id/tvHariKe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:text="Hari ke - 6"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvJudulDukungan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Yuk, Dukung Ibu Nifas"
+            android:textSize="20sp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DetailMasaNifas" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="40dp"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvJudulDukungan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

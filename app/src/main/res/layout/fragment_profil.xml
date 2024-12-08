@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfilFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="24dp">
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Profil"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="170dp"
+            android:layout_height="190dp"
+            android:src="@drawable/item_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvProfile" />
+
+        <Button
+            android:id="@+id/btSavedArticle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#C0B5E0"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Artikel Tersimpan"
+            app:cornerRadius="12dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <Button
+            android:id="@+id/btEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#C0B5E0"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Edit Profil"
+            app:cornerRadius="12dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btSavedArticle" />
+
+        <Button
+            android:id="@+id/btSetting"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#C0B5E0"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Pengaturan"
+            app:cornerRadius="12dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btEditProfile" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="40dp"
+            android:text="Keluar"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:backgroundTint="#8EC4B4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btSetting" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
